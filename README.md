@@ -2,15 +2,15 @@
 
 This exercise helps us understand how you design, reason about trade-offs, and write maintainable code. A perfect/complete product is less important than clear decisions, sound architecture, and readable code. Keep it small and focused.
 
-## Up to Senior-level developer Assignment
+## Assignment (Up to a Senior-level developer)
 
 We sell trucks, vans, machinery, and parts. Multiple buyers often click Reserve for the same vehicle. We need a soft hold that grants the first buyer a 15-minute reservation, shows a countdown, and auto-expires, and emits events (hold.created, hold.released, hold.expired) so other services can react. Showcase a solution with a http response of 409 when trying to put a second hold on a vehicle that already has a hold.
 
 ## Requirements
-•	Language/Framework: PHP 8.4+, Laravel 11+ (Or any other of your choice).
-•	Tooling: Docker
-•	Auth: header X-Api-Key (string, required on all write endpoints).
-•	Repo UX: Your app should run with at most 3 commands (clone, deps, up). If extra steps are needed, list them clearly in the README.
+- Language/Framework: PHP 8.4+, Laravel 11+ (Or any other of your choice).
+- Tooling: Docker
+- Auth: header X-Api-Key (string, required on all write endpoints).
+- Repo UX: Your app should run with at most 3 commands (clone, deps, up). If extra steps are needed, list them clearly in the README.
 
 ## What to build
 A tiny microservice that can:
@@ -21,8 +21,8 @@ A tiny microservice that can:
 5.	Trigger events via simple dispatcher. Event doesn’t have to do anything, just simulate work by writing to a log/file.
 
 ## Data model (minimum)
-•	vehicles — id (uuid|int), vin (unique)
-•	holds — id (uuid), vehicle_id, buyer_ref, status (ENUM: active|expired|released), expires_at (timestamptz)
+- vehicles — id (uuid|int), vin (unique)
+- holds — id (uuid), vehicle_id, buyer_ref, status (ENUM: active|expired|released), expires_at (timestamptz)
 
 ## API contracts
 ### 1) Create hold
