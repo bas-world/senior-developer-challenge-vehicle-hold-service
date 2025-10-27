@@ -2,7 +2,7 @@
 
 This exercise helps us understand how you design, reason about trade-offs, and write maintainable code. A perfect/complete product is less important than clear decisions, sound architecture, and readable code. Keep it small and focused.
 
-## Assignment (Up to a Senior-level developer)
+## Assignment (Up to Senior-level developer)
 
 We sell trucks, vans, machinery, and parts. Multiple buyers often click Reserve for the same vehicle. We need a soft hold that grants the first buyer a 15-minute reservation, shows a countdown, and auto-expires, and emits events (hold.created, hold.released, hold.expired) so other services can react. Showcase a solution with a http response of 409 when trying to put a second hold on a vehicle that already has a hold.
 
